@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadDisplayName</key>
+    <string>LocketGold Tifnh_tf</string>
+
+    <key>PayloadDescription</key>
+    <string>Tính năng:
+- Giữ nâng cấp LocketGold 
+- Chặn quảng cáo vài app, web
+Lưu ý: Sau khi cài cấu hình hạn chế bật VPN, sẽ bị rớt Gold. Vui lòng liên hệ lại admin.
+
+Supported By: Tifnh_tf</string>
+
+    <key>PayloadIdentifier</key>  // định danh //
+    <string>com.muselab.dns.profile</string>
+
+    <key>PayloadScope</key>  // định danh phạm vi 
+    <string>System</string>
+
+    <key>PayloadType</key> 
+    <string>Configuration</string>
+
+    <key>PayloadUUID</key>
+    <string>A1E2F262-DB73-40F6-BD22-2E42A43A3C94.29fff9</string>
+
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+
+                <key>ServerURL</key>
+                <string>https://apple.dns.nextdns.io/29fff9</string>
+            </dict>
+
+            <key>OnDemandRules</key>
+            <array>
+                <dict>
+                    <key>Action</key>
+                    <string>EvaluateConnection</string>
+                    <key>ActionParameters</key>
+                    <array>
+                        <dict>
+                            <key>DomainAction</key>
+                            <string>NeverConnect</string>
+                            <key>Domains</key>
+                            <array>
+                                <string>captive.apple.com</string>
+                                <string>3gppnetwork.org</string>
+                            </array>
+                        </dict>
+                    </array>
+                </dict>
+                <dict>
+                    <key>Action</key>
+                    <string>Connect</string>
+                </dict>
+            </array>
+
+            <key>PayloadDisplayName</key>
+            <string>Muse-Lab DNS Settings</string>
+
+            <key>PayloadIdentifier</key>
+            <string>com.muselab.dns.managed</string>
+
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+
+            <key>PayloadUUID</key>
+            <string>A1E2F262-DB73-40F6-BD22-2E42A43A3C94.29fff9.dnsSettings.managed</string>
+
+            <key>PayloadOrganization</key>
+            <string>Muse-Lab</string>
+
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+</dict>
+</plist>
